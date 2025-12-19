@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAÇ Group – Premium Quality</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial;
+  background:linear-gradient(180deg,#f3f4f6,#e5e7eb);
+  color:#1f2937;
+}
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#0f172a;
+  padding:12px 32px;
+  display:flex;
+  align-items:center;
+  z-index:1000;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+header img{height:54px}
+nav{margin-left:auto}
+nav button{
+  background:none;
+  border:none;
+  color:#e5e7eb;
+  margin-left:26px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  position:relative;
+}
+nav button::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#fb923c;
+  transition:.3s;
+}
+nav button:hover::after{width:100%}
+nav button:hover{color:#fb923c}
+
+/* PAGE */
+.page{
+  display:none;
+  padding:130px 40px 90px;
+  max-width:1250px;
+  margin:auto;
+  animation:fadeUp .6s ease;
+}
+.page.active{display:block}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+h1,h2{text-align:center}
+h1{font-size:64px}
+h1 span{color:#fb923c}
+h2{font-size:42px;margin-bottom:10px}
+
+/* CARDS */
+.cards{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  gap:40px;
+}
+.card{
+  background:#fff;
+  padding:34px;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.15);
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,#fb923c33,transparent);
+  opacity:0;
+  transition:.4s;
+}
+.card:hover::before{opacity:1}
+.card:hover{
+  transform:translateY(-12px) scale(1.01);
+}
+.card img{
+  width:100%;
+  border-radius:16px;
+  margin-bottom:22px;
+}
+.card h3{
+  color:#fb923c;
+  margin-top:0;
+}
+.card p{
+  line-height:1.6;
+  color:#374151;
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  color:#9ca3af;
+  text-align:center;
+  padding:36px;
+  margin-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="TAÇ Group Logo">
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('marble')">Marble</button>
+    <button onclick="showPage('raw')">Raw Materials</button>
+    <button onclick="showPage('electrical')">Electrical</button>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <h1>TAÇ <span>Group</span></h1>
+  <p style="text-align:center;font-size:22px;max-width:950px;margin:auto">
+    TAÇ Group is a premium supplier of marble, industrial raw materials, and advanced
+    electrical solutions. We deliver materials that meet international standards,
+    combining reliability, aesthetics, and long-term performance for modern projects.
+  </p>
+</section>
+
+<!-- MARBLE -->
+<section id="marble" class="page">
+  <h2>Marble Division</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+      <h3>Crema Nova</h3>
+      <p>
+        Crema Nova marble offers warm beige tones and refined texture, making it ideal
+        for luxury interiors, hotels, villas, and high-end architectural finishes.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <h3>Black Galaxy</h3>
+      <p>
+        Black Galaxy granite features golden crystal patterns on a deep black surface,
+        delivering a bold and elegant appearance with exceptional durability.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+      <h3>Granite</h3>
+      <p>
+        Granite is renowned for its strength and resistance, suitable for heavy-duty
+        applications requiring long-lasting performance.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- RAW MATERIALS -->
+<section id="raw" class="page">
+  <h2>Raw Materials Division</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+      <h3>Calcium Carbonate</h3>
+      <p>
+        High-purity calcium carbonate used in construction and industrial manufacturing,
+        ensuring consistency, stability, and reliable performance.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f">
+      <h3>Grand Stone</h3>
+      <p>
+        Grand Stone materials are engineered for infrastructure and heavy construction
+        projects where durability and strength are essential.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1602526216432-bd8a1e49d135">
+      <h3>White & Gray Cement</h3>
+      <p>
+        Premium cement products offering excellent bonding strength, uniform quality,
+        and long-term reliability for residential and industrial construction.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ELECTRICAL -->
+<section id="electrical" class="page">
+  <h2>Electrical Materials Division</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+      <h3>Electrical Cables</h3>
+      <p>
+        Certified electrical cables designed for safe power transmission in residential,
+        commercial, and industrial environments.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4">
+      <h3>Lighting Systems</h3>
+      <p>
+        Modern lighting systems focused on efficiency, durability, and performance for
+        indoor, outdoor, and industrial applications.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581093458791-9b54d5c1eab1">
+      <h3>Switches & Panels</h3>
+      <p>
+        Professional electrical switches and distribution panels engineered for safety,
+        stability, and long-term operation in modern electrical systems.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 TAÇ Group — Premium Quality Without Compromise
+</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
